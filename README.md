@@ -113,7 +113,7 @@
 - Volta num determinado commit, os arquivos retornam, é importante o trabalho estar todo commitado e sem dependências, o parâmetro X, está relacionado ao número do commit. Exemplo: último committ teria o número 0, penúltimo teria -1, e assim por diante, portando se é -1, colocaremos ~1
 
     git revert HEAD~X
-- Outra alternativa 
+- Outra alternativa, hash == número do hash do commit em que deseja
 
     git revert hash
     
