@@ -51,3 +51,70 @@
 - Visualizando commits com o grep, filtrando pelos commits, nesse caso ele irá filtrar aquele commit que tiver "initial" na mensagem do commit
 
     git log --grep="initial"
+    
+- Visualizando todos commits
+
+    git log --oneline
+### Status
+- Visualizando o status, isso nos dirá em qual branch estamos, sem há arquivos sem commits
+
+    git status
+### Removed 
+- Removendo um arquivo para não ser commitado
+
+    git rm --cached nome_arquivo.extensao
+### Diff
+- Para visualizar as modificações feitas em todos os arquivos
+
+    git diff
+- Para ver as diferenças no Stage Area
+
+    git diff --staged
+### Rm
+- Removendo arquivo do working directory, nesse caso, irá deletar o arquivo
+
+    git rm nome_arquivo.extensão
+### Mv
+- Renomeando arquivo
+    
+    git mv nome_arquivo.extensão nome_arquivo2.extensão
+- Movendo para outros diretórios
+
+    git mv nome_arquivo.extensao /caminho/diretorio/nome_arquivo.extensão
+### Restore
+- Restaurando alterações feitas em um arquivo, supondo que você apagou linhas e queira recuperar, ou adicionou linhas e não quer essas linhas novas
+
+    git restore nome_arquivo.extensao
+- Restaurando para o working directory e removendo do stage area, caso use o . irá pegar todos arquivos.
+
+    git restore --stateg nome_arquivo.extensao
+    
+    git restore --staged .
+- Alternativa para tirar o arquivo do stage area
+
+    git reset HEAD .
+    
+    git reset HEAD nome_arquivo.extensão
+### --amend
+- Modificanda a mensagem do último commit
+
+    git commit --amend -m "msg do commit modificada"
+### Checkout
+- Como recuperar um arquivo num commit específico
+
+    git checkout inicio_hash -- nome_arquivo.extensão
+    
+    git checkout e72a2 -- nome_arquivo.md
+### Clean
+- Removendo arquivos não rastreados, ao fazer isso, ele deleta do working directory,e não hpa como recuperar na história
+
+    git clean -f
+### Revert
+- Volta num determinado commit, os arquivos retornam, é importante o trabalho estar todo commitado e sem dependências, o parâmetro X, está relacionado ao número do commit. Exemplo: último committ teria o número 0, penúltimo teria -1, e assim por diante, portando se é -1, colocaremos ~1
+
+    git revert HEAD~X
+- Outra alternativa 
+
+    git revert hash
+    
+ 
