@@ -32,6 +32,9 @@
 - Adicionando commit, commit seria um ponto na história
 
     git commit -m "commit initial"
+- Quando todos arquvios já estão sendo rastreados, não é necessário usar o add, -a, e podemos juntar o m da mensagem
+
+    git commit -am "comitando"
 ### Log
 - Visualizando os commits, hashs e qual branch foi modificada
 
@@ -70,6 +73,9 @@
 - Para ver as diferenças no Stage Area
 
     git diff --staged
+- Verficando as diferenças com letras e cores diferentes
+
+    git diff --color-words
 ### Rm
 - Removendo arquivo do working directory, nesse caso, irá deletar o arquivo
 
@@ -116,5 +122,23 @@
 - Outra alternativa, hash == número do hash do commit em que deseja
 
     git revert hash
-    
  
+### Show
+- Apresentandos todas modificações
+
+    git show hash
+    
+    git show hash --color-words
+    
+    git show hash -- caminho/diretório/*
+    
+    git show hash -- caminho/diretório/nome_arquivo.extensão
+    
+### Gitignore
+- Serve para não precisar monitorar arquivos, criar arquivo .gitignore e adicionar o nome dos arquivos que não serão monitorados.
+
+    criar um arquivo .gitignore 
+    
+    git add .gitignore
+    
+    
