@@ -112,7 +112,7 @@
     
     git checkout e72a2 -- nome_arquivo.md
 ### Clean
-- Removendo arquivos não rastreados, ao fazer isso, ele deleta do working directory,e não hpa como recuperar na história
+- Removendo arquivos não rastreados, ao fazer isso, ele deleta do working directory,e não há como recuperar na história
 
     git clean -f
 ### Revert
