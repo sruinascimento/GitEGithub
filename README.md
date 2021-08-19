@@ -141,4 +141,39 @@
     
     git add .gitignore
     
-    
+## GitHub
+
+### Configuração e sincronização
+- Após ter um repositório local já configurado e commitado
+- Vamos configurar com o repositório no Github, linkando repositório da nuvem com o repositório local
+
+    git remote add origin git@github.com:sruiNascimento/lgeg.git
+- Criando a branch main no repo local
+
+    git branch -M main, padrão é master, mudando para main
+### Push
+- Enviando repo local para a nuvem
+
+    git push -u origin main
+- Enviando as modificações para a nuvem
+
+    git push origin main
+- Alternativa
+
+    git push
+### Pull
+- Baixando da nuvem os arquivos mais atuais do mesmo repositório, pois do repositório local está desatualizado e na nuvem está atualizado
+
+    git pull
+### Configurando o merge
+- Necessário configurar a estratégia padrão
+
+    git config --global pull.rebase false
+### Clone
+- Fazendo clone de projeto na máquina, o comando irá criar um diretório do repositório da máquina local
+
+    git clone <chave ssh do repo>
+ 
+ - Exemplo
+ 
+     git clone git@github.com:sruiNascimento/GitEGithub.git
